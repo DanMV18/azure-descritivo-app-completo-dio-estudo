@@ -1,0 +1,1 @@
+# azure-descritivo-app-completo-dio-estudo
