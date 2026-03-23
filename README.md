@@ -31,20 +31,16 @@ Esta seção contextualiza a aplicação, descrevendo o problema de negócio e a
 ```markdown
 ## 2. Visão Geral
 
-O **[Nome do Projeto]** é uma solução empresarial desenhada para [inserir brevemente o propósito: ex: processamento de pedidos em larga escala / análise de dados em tempo real]. 
+O **[Projeto]** é um exemplo de passo a passo para uma solução desenhada para estudar a implementação de serviços no ambiente Azure. 
 
 Diferente de arquiteturas monolíticas tradicionais, este projeto utiliza uma abordagem **Cloud-Native**, aproveitando o poder da orquestração serverless e do desacoplamento por mensageria. A solução foi projetada para suportar alta disponibilidade, escalabilidade elástica e segurança rigorosa, garantindo que cada componente do ecossistema Azure desempenhe um papel específico e otimizado.
 
-### Objetivos Principais:
+### Objetivos Principais de estudo:
 * **Escalabilidade Elástica:** Garantir que o sistema responda a picos de demanda sem intervenção manual, utilizando KEDA em Container Apps.
 * **Resiliência e Desacoplamento:** Utilizar filas e tópicos para assegurar que falhas em serviços secundários não interrompam o fluxo principal.
 * **Segurança "Zero Trust":** Implementar o princípio de privilégio mínimo através de identidades gerenciadas (Managed Identities) e centralização de segredos.
 * **Observabilidade de Ponta a Ponta:** Monitoramento granular de performance e rastreamento de requisições distribuídas.
 ```
-
----
-
-**Dica Profissional:** Ao preencher o campo `[inserir brevemente o propósito]`, tente usar termos de negócio (ex: "redução de latência em operações financeiras" ou "automação de pipeline de vendas"). Isso mostra que você entende que a tecnologia serve ao negócio.
 
 ---
 
@@ -120,8 +116,6 @@ A escolha das tecnologias baseou-se na necessidade de criar um ambiente escaláv
 * **Containerização:** Docker (Multi-stage builds para otimização de imagem).
 * **Comunicação:** REST (HTTP/gRPC) e Mensageria Assíncrona.
 
-**Dica Profissional:** Ao listar o **Application Insights** e o **Log Analytics**, você demonstra que sua stack não foca apenas em "fazer funcionar", mas também em "como manter", o que é um diferencial enorme para perfis Sênior e de Arquitetura.
-
 ---
 
 ## 5. Processo de Implementação (Deep Dive)
@@ -157,8 +151,6 @@ A pedra angular da segurança deste projeto:
 * **User-Assigned Managed Identity:** Atribuída aos Container Apps e Functions, eliminando a necessidade de armazenar senhas ou chaves em arquivos de configuração (`appsettings.json` ou `.env`).
 * **Key Vault RBAC:** Centralização de segredos remanescentes (como chaves de APIs de terceiros) com acesso controlado estritamente via permissões de leitura para as identidades específicas dos serviços.
 
-**Dica Profissional:** Ao mencionar "Secretless" e "KEDA", você sinaliza para quem está lendo que conhece padrões modernos de arquitetura de nuvem que vão além do básico.
-
 ---
 
 ## 6. Monitoramento e Observabilidade
@@ -184,7 +176,6 @@ A proatividade é garantida através de configurações de alerta:
 
 > **Nota Técnica:** A integração é feita via SDK nativo, garantindo que o `Correlation-ID` seja propagado automaticamente entre o Service Bus e as Functions, mantendo a linhagem dos dados intacta.
 
-**Dica Profissional:** Mencionar a **Kusto Query Language (KQL)** mostra que você tem experiência prática na plataforma Azure, pois essa é a linguagem utilizada para extrair inteligência dos logs no portal.
 
 ---
 
@@ -235,8 +226,6 @@ func start
 Para desenvolvimento totalmente offline, recomendamos o uso do **Azurite** (emulador de Storage) e **SQL Server Edge** via Docker para simular as dependências do Azure.
 
 
-**Dica Profissional:** Incluir o comando `az login` e a troca de assinatura evita erros comuns de permissão para desenvolvedores que trabalham com múltiplos tenants de clientes.
-
 ---
 
 ## 8. CI/CD Pipeline (GitHub Actions)
@@ -277,8 +266,6 @@ Para elevar o nível de segurança, este projeto não utiliza senhas estáticas 
     imageToDeploy: ${{ secrets.ACR_NAME }}.azurecr.io/web-app:${{ github.sha }}
 
 
-**Dica Profissional:** Mencionar o **OIDC** é um enorme diferencial. Mostra que você está atualizado com as recomendações mais recentes da Microsoft para segurança de identidade em pipelines (Identity Federation).
-
 ---
 
 ## 9. Governança e Custos
@@ -306,9 +293,5 @@ A arquitetura foi desenhada para ser **Cost-Efficient**:
 ### 9.4. Orçamentos e Alertas
 * **Azure Cost Management:** Configuração de *Budgets* com alertas automáticos via e-mail quando o consumo atinge 50%, 75% e 90% da cota mensal prevista.
 * **Quotas:** Limites de CPU e Memória definidos nos Container Apps para evitar gastos inesperados por loops infinitos ou ataques de negação de serviço.
-
-
-
-**Dica Profissional:** Ao falar de "Scale-to-Zero" e "FinOps", você mostra que possui uma visão de **Arquiteto de Soluções**, preocupado com o ROI (Retorno sobre Investimento) da infraestrutura da empresa.
 
 ---
