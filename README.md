@@ -18,9 +18,6 @@ Este projeto demonstra uma implementação robusta e escalável utilizando o eco
 
 ---
 
-**O que este tópico comunica ao recrutador/arquiteto:**
-* **Profissionalismo:** O uso de badges mostra que você se preocupa com CI/CD e status em tempo real.
-* **Clareza:** O subtítulo já posiciona a tecnologia principal (Container Apps) e o paradigma (Serverless/Microservices).
 
 ---
 
