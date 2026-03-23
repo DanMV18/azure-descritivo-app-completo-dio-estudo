@@ -1,8 +1,5 @@
 # 1. Título e Badges
 
-Nesta seção, definimos a identidade do projeto e utilizamos *badges* para transmitir, de imediato, o status da infraestrutura e do deploy.
-
-
 # [EXEMPLO DE PASSO A PASSO PARA IMPLEMENTAÇÃO DE SERVIÇOS NO AMBIENTE AZURE]: Solução Cloud-Native com Azure Ecosystem
 
 > **Arquitetura de Microserviços e Orquestração Serverless**
@@ -13,7 +10,7 @@ Nesta seção, definimos a identidade do projeto e utilizamos *badges* para tran
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-black?logo=github-actions)](https://github.com/features/actions)
 
-Este projeto demonstra uma implementação robusta e escalável utilizando o ecossistema **Microsoft Azure**, focando em desacoplamento de serviços, segurança de segredos e monitoramento de alta performance.
+Este projeto demonstra uma hipotética implementação robusta e escalável utilizando o ecossistema **Microsoft Azure**, focando em desacoplamento de serviços, segurança de segredos e monitoramento de alta performance. O foco é interamente em descrever processos e opções e não implementar um produto real.
 
 
 ---
